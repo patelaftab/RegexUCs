@@ -8,7 +8,8 @@
             Console.WriteLine("Choose a Valid Option From Below\n" +
                 "1]: For User Name validation\n" +
                 "2]: For User Last Name validation\n" +
-                "3]: For User Email validation\n");
+                "3]: For User Email validation\n" +
+                "4]: For User Mbile Number validation\n");
             int Option = Convert.ToInt32(Console.ReadLine());
             switch(Option) 
             {
@@ -20,6 +21,9 @@
                     break;
                 case 3:
                         UserRegistration.EmailValidating();
+                    break;
+                case 4:
+                    UserRegistration.MobileNumber();
                     break;
                 default:
                     Console.WriteLine("Choose a Valid Option");

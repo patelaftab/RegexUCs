@@ -30,6 +30,13 @@ namespace RegexUCs
             string regexCondition = "^[a-z]{1}[a-z]{2}(.)[a-z]{3}(@bl.co)$";
             Iteration(userInput, regexCondition);
         }
+        public static void MobileNumber()      //UC4
+        {
+            Console.WriteLine("Enter your MobileNumber");
+            string userInput = Console.ReadLine();
+            string regexCondition = "^[0-9]{2}[ ][0-9]{10}$";
+            Iteration(userInput, regexCondition);
+        }
         public static void Iteration(string userInput, string regexCondition)
         {
             if (Regex.IsMatch(userInput, regexCondition))
