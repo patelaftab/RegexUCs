@@ -9,7 +9,8 @@
                 "1]: For User Name validation\n" +
                 "2]: For User Last Name validation\n" +
                 "3]: For User Email validation\n" +
-                "4]: For User Mbile Number validation\n");
+                "4]: For User Mbile Number validation\n" +
+                "5]: For User Password validation\n");
             int Option = Convert.ToInt32(Console.ReadLine());
             switch(Option) 
             {
@@ -24,6 +25,9 @@
                     break;
                 case 4:
                     UserRegistration.MobileNumber();
+                    break;
+                case 5:
+                    UserRegistration.PassMin8Char();
                     break;
                 default:
                     Console.WriteLine("Choose a Valid Option");

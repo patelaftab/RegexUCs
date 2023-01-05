@@ -37,6 +37,13 @@ namespace RegexUCs
             string regexCondition = "^[0-9]{2}[ ][0-9]{10}$";
             Iteration(userInput, regexCondition);
         }
+        public static void PassMin8Char()      //UC5
+        {
+            Console.WriteLine("Enter your Password");
+            string userInput = Console.ReadLine();
+            string regexCondition = "^[a-zA-Z0-9]{8,}$";
+            Iteration(userInput, regexCondition);
+        }
         public static void Iteration(string userInput, string regexCondition)
         {
             if (Regex.IsMatch(userInput, regexCondition))
