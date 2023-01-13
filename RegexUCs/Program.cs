@@ -12,7 +12,8 @@
                 "4]: For User Mbile Number validation\n" +
                 "5]: For User Password validation\n" +
                 "6]: For User Password of Minimun 1 character in upper Case\n" +
-                "7]: For User Password of Minimum 1 cahracter and 1 number \n");
+                "7]: For User Password of Minimum 1 cahracter and 1 number \n" +
+                "8]: For User Password with Special Character \n");
             int Option = Convert.ToInt32(Console.ReadLine());
             switch(Option) 
             {
@@ -36,6 +37,9 @@
                     break;
                 case 7:
                     UserRegistration.UpperCase1AndNumeric1();
+                    break;
+                case 8:
+                    UserRegistration.SpecialCharacter1();
                     break;
                 default:
                     Console.WriteLine("Choose a Valid Option");
