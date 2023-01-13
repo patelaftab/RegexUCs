@@ -13,7 +13,8 @@
                 "5]: For User Password validation\n" +
                 "6]: For User Password of Minimun 1 character in upper Case\n" +
                 "7]: For User Password of Minimum 1 cahracter and 1 number \n" +
-                "8]: For User Password with Special Character \n");
+                "8]: For User Password with Special Character \n" +
+                "9]: For User Sample Email Address \n");
             int Option = Convert.ToInt32(Console.ReadLine());
             switch(Option) 
             {
@@ -40,6 +41,9 @@
                     break;
                 case 8:
                     UserRegistration.SpecialCharacter1();
+                    break;
+                case 9:
+                    UserRegistration.EmailSample();
                     break;
                 default:
                     Console.WriteLine("Choose a Valid Option");
