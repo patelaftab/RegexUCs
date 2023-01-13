@@ -44,6 +44,20 @@ namespace RegexUCs
             string regexCondition = "^[a-zA-Z0-9]{8,}$";
             Iteration(userInput, regexCondition);
         }
+        public static void PassMin8CharAnd1UpperCase() //UC6 (min 8 char and atleast 1 upper case in it.
+        {
+            Console.WriteLine("Enter your Password");
+            string userInput = Console.ReadLine();
+            string regexCondition = "^(?=.*[A-Z]).{1,}[a-zA-Z0-9]{7,}$";
+            Iteration(userInput, regexCondition);
+        }
+        public static void UpperCase1AndNumeric1() //UC7 (min 8 char and atleast 1 upper case and 1 numeric in it.
+        {
+            Console.WriteLine("Enter your Password");
+            string userInput = Console.ReadLine();
+            string regexCondition = "^(?=.*[A-Z]).{1,}(?=.*[0-9]).{1,}[a-zA-Z0-9]{6,}$";
+            Iteration(userInput, regexCondition);
+        }
         public static void Iteration(string userInput, string regexCondition)
         {
             if (Regex.IsMatch(userInput, regexCondition))
